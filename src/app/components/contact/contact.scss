@@ -1,0 +1,48 @@
+.section-card {
+  padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 6vw, 4rem);
+  background: #fff;
+}
+
+h2 {
+  margin-top: 0;
+  color: #0a1831;
+}
+
+form {
+  display: grid;
+  gap: 0.9rem;
+  max-width: 640px;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  color: #1b315a;
+  font-weight: 500;
+}
+
+input,
+textarea {
+  border: 1px solid #d8dde7;
+  border-radius: 0.5rem;
+  padding: 0.65rem;
+  font: inherit;
+}
+
+button {
+  justify-self: start;
+  background: #0a1831;
+  color: #fff;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.65rem 1.2rem;
+}
+
+small {
+  color: #b0453f;
+}
+
+.feedback {
+  color: #1f6b3a;
+  margin: 0;
+}

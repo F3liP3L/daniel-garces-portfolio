@@ -1,0 +1,12 @@
+<div class="section-card">
+  <h2>Testimonios</h2>
+  <div class="grid">
+    @for (testimonial of testimonials; track testimonial.name) {
+      <article>
+        <p>“{{ testimonial.quote }}”</p>
+        <h3>{{ testimonial.name }}</h3>
+        <span>{{ testimonial.role }}</span>
+      </article>
+    }
+  </div>
+</div>

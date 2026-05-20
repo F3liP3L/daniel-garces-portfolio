@@ -1,0 +1,20 @@
+<header class="navbar">
+  <a class="brand" href="#inicio" (click)="closeMenu()">Daniel Garcés</a>
+
+  <button
+    class="menu-toggle"
+    type="button"
+    (click)="toggleMenu()"
+    [attr.aria-expanded]="isMenuOpen"
+    aria-label="Abrir menú"
+  >
+    ☰
+  </button>
+
+  <nav [class.open]="isMenuOpen">
+    @for (link of links; track link.fragment) {
+      <a href="#{{ link.fragment }}" (click)="closeMenu()">{{ link.label }}</a>
+    }
+    <a href="#contacto" class="cta" (click)="closeMenu()">Solicitar asesoría</a>
+  </nav>
+</header>

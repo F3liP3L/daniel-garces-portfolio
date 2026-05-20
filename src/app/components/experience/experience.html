@@ -1,0 +1,12 @@
+<div class="section-card">
+  <h2>Experiencia</h2>
+  <p class="intro">Resultados respaldados por trayectoria y confianza de clientes.</p>
+  <div class="stats">
+    @for (stat of stats; track stat.label) {
+      <article>
+        <strong>{{ stat.value }}</strong>
+        <span>{{ stat.label }}</span>
+      </article>
+    }
+  </div>
+</div>
