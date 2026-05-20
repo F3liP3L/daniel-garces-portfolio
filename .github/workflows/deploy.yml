@@ -35,7 +35,7 @@ jobs:
           npm ci
 
       - name: Compilar Angular
-        run: npm run build
+        run: npm run build:github-pages
 
       - name: Subir artefacto
         uses: actions/upload-pages-artifact@v3
