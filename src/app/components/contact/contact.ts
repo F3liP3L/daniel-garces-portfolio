@@ -1,6 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 
+// Permite números internacionales con dígitos, espacios, guiones y prefijo +.
+const PHONE_PATTERN = /^[+\d\s-]{7,20}$/;
+
 @Component({
   selector: 'app-contact',
   imports: [ReactiveFormsModule],
@@ -13,7 +16,7 @@ export class Contact {
   readonly contactForm = this.formBuilder.nonNullable.group({
     name: ['', [Validators.required, Validators.minLength(2)]],
     email: ['', [Validators.required, Validators.email]],
-    phone: ['', [Validators.required, Validators.pattern(/^[+\d\s-]{7,20}$/)]],
+    phone: ['', [Validators.required, Validators.pattern(PHONE_PATTERN)]],
     message: ['', [Validators.required, Validators.minLength(10)]],
   });
 
