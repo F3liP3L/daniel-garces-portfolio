@@ -25,11 +25,14 @@ jobs:
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
 
       - name: Instalar dependencias
-        run: npm ci
+        run: |
+          corepack enable
+          corepack prepare npm@11.11.0 --activate
+          npm ci
 
       - name: Compilar Angular
         run: npm run build
