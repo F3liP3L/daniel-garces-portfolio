@@ -1,0 +1,60 @@
+.hero {
+  min-height: calc(100svh - 85px);
+  padding: clamp(2rem, 8vw, 6rem) clamp(1rem, 6vw, 4rem);
+  display: grid;
+  align-content: center;
+  gap: 1rem;
+  background:
+    linear-gradient(rgba(10, 24, 49, 0.83), rgba(10, 24, 49, 0.83)),
+    radial-gradient(circle at top, #2f446d 0%, #0a1831 60%);
+  color: #fff;
+}
+
+.eyebrow {
+  color: #c6a969;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 6vw, 4rem);
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  font-weight: 500;
+}
+
+.description {
+  max-width: 42rem;
+  color: #e7ebf3;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.button {
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.7rem 1.2rem;
+  transition: transform 0.25s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.primary {
+  background: #c6a969;
+  color: #0a1831;
+}
+
+.secondary {
+  border: 1px solid #fff;
+  color: #fff;
+}

@@ -1,0 +1,11 @@
+<div class="section-card">
+  <h2>Áreas de práctica</h2>
+  <div class="grid">
+    @for (area of practiceAreas; track area.title) {
+      <article>
+        <h3>{{ area.title }}</h3>
+        <p>{{ area.description }}</p>
+      </article>
+    }
+  </div>
+</div>

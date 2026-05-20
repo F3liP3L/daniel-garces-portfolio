@@ -1,0 +1,32 @@
+.section-card {
+  padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 6vw, 4rem);
+  background: #fff;
+}
+
+h2 {
+  margin-top: 0;
+  color: #0a1831;
+}
+
+.intro {
+  max-width: 32rem;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1rem;
+}
+
+article {
+  background: #0a1831;
+  border-radius: 0.6rem;
+  color: #fff;
+  padding: 1rem;
+}
+
+strong {
+  display: block;
+  color: #c6a969;
+  font-size: 1.6rem;
+}

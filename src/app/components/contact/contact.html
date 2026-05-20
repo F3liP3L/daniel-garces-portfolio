@@ -1,0 +1,44 @@
+<div class="section-card">
+  <h2>Contacto</h2>
+  <p>Completa el formulario y recibe asesoría jurídica personalizada.</p>
+
+  <form [formGroup]="contactForm" (ngSubmit)="submit()" novalidate>
+    <label>
+      Nombre
+      <input type="text" formControlName="name" />
+      @if (contactForm.controls.name.touched && contactForm.controls.name.invalid) {
+        <small>Ingresa un nombre válido.</small>
+      }
+    </label>
+
+    <label>
+      Correo
+      <input type="email" formControlName="email" />
+      @if (contactForm.controls.email.touched && contactForm.controls.email.invalid) {
+        <small>Ingresa un correo válido.</small>
+      }
+    </label>
+
+    <label>
+      Teléfono
+      <input type="tel" formControlName="phone" />
+      @if (contactForm.controls.phone.touched && contactForm.controls.phone.invalid) {
+        <small>Ingresa un teléfono válido.</small>
+      }
+    </label>
+
+    <label>
+      Mensaje
+      <textarea rows="5" formControlName="message"></textarea>
+      @if (contactForm.controls.message.touched && contactForm.controls.message.invalid) {
+        <small>El mensaje debe tener al menos 10 caracteres.</small>
+      }
+    </label>
+
+    <button type="submit">Enviar solicitud</button>
+
+    @if (requestSent) {
+      <p class="feedback">Gracias. Tu solicitud fue registrada correctamente.</p>
+    }
+  </form>
+</div>
