@@ -29,8 +29,8 @@ export class SiteContentService {
   ];
 
   readonly experienceStats: ExperienceStat[] = [
-    { value: '15+', label: 'Años de experiencia' },
-    { value: '320+', label: 'Casos atendidos' },
+    { value: '1+', label: 'Año de experiencia' },
+    { value: '20+', label: 'Casos atendidos' },
     { value: '95%', label: 'Clientes recurrentes' },
   ];
 
