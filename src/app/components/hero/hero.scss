@@ -1,13 +1,32 @@
 .hero {
+  position: relative;
+  overflow: hidden;
   min-height: calc(100svh - 85px);
-  padding: clamp(2rem, 8vw, 6rem) clamp(1rem, 6vw, 4rem);
+  display: grid;
+  color: #fff;
+}
+
+.hero__image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(10, 24, 49, 0.72), rgba(10, 24, 49, 0.78)),
+    linear-gradient(90deg, rgba(10, 24, 49, 0.18) 0%, rgba(10, 24, 49, 0.5) 100%);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
   display: grid;
   align-content: center;
   gap: 1rem;
-  background:
-    linear-gradient(rgba(10, 24, 49, 0.83), rgba(10, 24, 49, 0.83)),
-    radial-gradient(circle at top, #2f446d 0%, #0a1831 60%);
-  color: #fff;
+  min-height: calc(100svh - 85px);
+  padding: clamp(2rem, 8vw, 6rem) clamp(1rem, 6vw, 4rem);
 }
 
 .eyebrow {
@@ -30,6 +49,10 @@ h2 {
 .description {
   max-width: 42rem;
   color: #e7ebf3;
+}
+
+.highlight {
+  color: #fff;
 }
 
 .actions {

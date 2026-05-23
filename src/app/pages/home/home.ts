@@ -21,17 +21,15 @@ export class Home implements OnInit, AfterViewInit {
   private readonly meta = inject(Meta);
 
   ngOnInit(): void {
-    // SEO básico de la landing principal.
     this.title.setTitle('Daniel Garcés | Consultoría Jurídica Integral');
     this.meta.updateTag({
       name: 'description',
       content:
-        'Firma legal de Daniel Garcés: asesoría estratégica en derecho empresarial, civil, laboral y consultoría jurídica integral.',
+        'Firma legal de Daniel Garcés: asesoría estratégica en derecho civil y laboral.',
     });
   }
 
   ngAfterViewInit(): void {
-    // Animaciones discretas al entrar cada bloque en viewport.
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
